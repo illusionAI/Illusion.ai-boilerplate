@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>illusion.ai Embedding Example </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.illusion.ai/illusion-alpha.css">
+    <script type="text/javascript" src="https://cdn.illusion.ai/chat.js"></script>
+  </head>
+  <body>
+    <!-- You can call this element anything you'd like. Just make sure it
+         matches the "targetNode" selector in the
+         JavaScript snippet below. Note that the element name needs to be proceeded by a "." in the "targetNode". -->
+    <div id="my_chat"></div>
+
+    <script type="text/javascript">
+     var chat = new Chat({
+
+        greeting: [
+          'Welcome to illusion.ai',
+          'Our platform makes it easy to integrate highly customizable conversational interfaces into your web and mobile products.',
+          
+           
+          {
+            type: 'choose',
+            answers: [{
+              'text': 'Learn More',
+              'path': 'learn_more'
+            },
+            {
+              'text': 'Get Started',
+              'path': 'get_started'
+            }]
+          }
+        ],
+
+        learn_more: [
+          'With illusion.ai you can easily add conversational interfaces into your existing web apps. Our platforms looks great on web or mobile, and its super easy to add media like gifs, images, or videos. ',
+          {
+            type: 'choose',
+            answers: [{
+              'text': 'Lets\'s get started.',
+              'path': 'get_started'
+            }]
+          }
+        ],
+       'get_started' [
+          'Great lets get you started creating your first illusion.ai powred cnversation',
+        ],
+      }, {
+        targetNode: '.my_chat'
+      });
+    </script>
+  </body>
+</html>
